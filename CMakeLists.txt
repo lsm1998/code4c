@@ -6,8 +6,10 @@ get_filename_component(ProjectId ${CMAKE_CURRENT_SOURCE_DIR} NAME)
 
 project(${ProjectId} C)
 
+include_directories(include)
+
 # for循环加入源文件
-file(GLOB files "${CMAKE_CURRENT_SOURCE_DIR}/*.c")
+file(GLOB files "${CMAKE_CURRENT_SOURCE_DIR}/src/*.c")
 foreach(file ${files})
     get_filename_component(name `${file} NAME)
     add_executable(${name} ${file})
