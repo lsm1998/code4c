@@ -3,6 +3,8 @@
 //
 #include <stdio.h>
 
+#include "../utils/include/math.h"
+
 /**
  * 全局数组值是默认为空
  * 局部变量数组值在gcc环境默认不处理
@@ -29,5 +31,7 @@ int main()
 
     PrintArray(array1);
     PrintArray(array2);
+
+    printf("%d \n",sum(10, 20));
     return 0;
 }
