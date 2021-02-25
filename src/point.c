@@ -20,6 +20,17 @@ void InitInt(int **p, int val)
     **p = val;
 }
 
+/**
+ * 使用malloc之后，指针p内存地址会是分配的新地址
+ * @param p
+ * @param val
+ */
+void InitInt2(int *p, int val)
+{
+    //p = malloc(sizeof(int));
+    *p = val;
+}
+
 int main()
 {
     int a = 10;
@@ -38,5 +49,10 @@ int main()
     int *t = NULL;
     InitInt(&t, 100);
     printf("%d \n", *t);
+
+
+    int t2 = 0;
+    InitInt2(&t2, 100);
+    printf("111 - %d \n", t2);
     return 0;
 }
