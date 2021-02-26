@@ -6,7 +6,7 @@
 
 int main()
 {
-    FILE *file = fopen("", "w");
+    FILE *file = fopen("hello.txt", "w");
 
     CURL *curl = curl_easy_init();
 

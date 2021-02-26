@@ -1,5 +1,13 @@
 #include <stdio.h>
 
+#if defined(_WIN16) || defined(_WIN32) || defined(_WIN64)
+
+#elif defined(__linux__)
+
+#else
+#include <stddef.h>
+#endif
+
 int main()
 {
     for (int i = 0; i < 10; ++i)
